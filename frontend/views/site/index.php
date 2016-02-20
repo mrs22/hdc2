@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -19,8 +18,22 @@ $this->title = 'My Yii Application';
         <div class="row">
             <div class="col-lg-4">
                 <h2>Heading</h2>
+                <?php
+                $time = time();
+                //$time = '2015-06-03 13:25:17';
+                echo Yii::$app->thaiFormatter->asDate($time, 'short') . "<br>";
+                echo Yii::$app->thaiFormatter->asDate($time, 'medium') . "<br>";
+                echo Yii::$app->thaiFormatter->asDate($time, 'long') . "<br>";
+                echo Yii::$app->thaiFormatter->asDate($time, 'full') . "<br>";
 
-                
+                echo Yii::$app->thaiFormatter->asDateTime($time, 'short') . "<br>";
+                echo Yii::$app->thaiFormatter->asDateTime($time, 'medium') . "<br>";
+                echo Yii::$app->thaiFormatter->asDateTime($time, 'long') . "<br>";
+                echo Yii::$app->thaiFormatter->asDateTime($time, 'full') . "<br>";
+
+                echo Yii::$app->thaiFormatter->asDate($time, 'php:Y-m-d');
+                echo Yii::$app->thaiFormatter->asDateTime($time, 'php:Y-m-d H:i:s');
+                ?>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>
