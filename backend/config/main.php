@@ -17,6 +17,13 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
+        'view' => [
+         'theme' => [
+             'pathMap' => [
+                '@backend/views' => '@backend/themes/adminlte'
+             ],
+         ],
+    ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
