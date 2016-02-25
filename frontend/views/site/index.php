@@ -44,8 +44,20 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>
+                <?php
 
-               
+                use kartik\widgets\ActiveForm;
+
+                    $form = kartik\widgets\ActiveForm::begin(
+                                [
+                                    'id' => 'signup-form',
+                                    'enableAjaxValidation' => true,
+                                    'fieldConfig' => [
+                                        'autoPlaceholder' => true
+                                    ]
+                ]);
+                ?>
+
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
